@@ -1,0 +1,181 @@
+{
+  "projects": [
+    {
+      "id": "demo-anika-rohan",
+      "slug": "anika-and-rohan",
+      "clientNames": "Anika & Rohan",
+      "category": "Wedding",
+      "shootDate": "2026-11-14",
+      "accessCode": "ANIKA26",
+      "status": "ready",
+      "maxSelections": 60,
+      "coverImageId": "demo-img-3",
+      "images": [
+        {
+          "id": "demo-img-1",
+          "filename": "frame-01.jpg",
+          "url": "/placeholders/plate-1.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-2",
+          "filename": "frame-02.jpg",
+          "url": "/placeholders/plate-2.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-3",
+          "filename": "frame-03.jpg",
+          "url": "/placeholders/plate-3.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-4",
+          "filename": "frame-04.jpg",
+          "url": "/placeholders/plate-4.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-5",
+          "filename": "frame-05.jpg",
+          "url": "/placeholders/plate-5.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-6",
+          "filename": "frame-06.jpg",
+          "url": "/placeholders/plate-6.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-7",
+          "filename": "frame-07.jpg",
+          "url": "/placeholders/plate-7.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-8",
+          "filename": "frame-08.jpg",
+          "url": "/placeholders/plate-8.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-9",
+          "filename": "frame-09.jpg",
+          "url": "/placeholders/plate-9.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-10",
+          "filename": "frame-10.jpg",
+          "url": "/placeholders/plate-10.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-11",
+          "filename": "frame-11.jpg",
+          "url": "/placeholders/plate-11.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-12",
+          "filename": "frame-12.jpg",
+          "url": "/placeholders/plate-12.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-13",
+          "filename": "frame-13.jpg",
+          "url": "/placeholders/plate-13.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-14",
+          "filename": "frame-14.jpg",
+          "url": "/placeholders/plate-14.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-15",
+          "filename": "frame-15.jpg",
+          "url": "/placeholders/plate-1.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-16",
+          "filename": "frame-16.jpg",
+          "url": "/placeholders/plate-2.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-17",
+          "filename": "frame-17.jpg",
+          "url": "/placeholders/plate-3.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-18",
+          "filename": "frame-18.jpg",
+          "url": "/placeholders/plate-4.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-19",
+          "filename": "frame-19.jpg",
+          "url": "/placeholders/plate-5.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-20",
+          "filename": "frame-20.jpg",
+          "url": "/placeholders/plate-6.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-21",
+          "filename": "frame-21.jpg",
+          "url": "/placeholders/plate-7.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-22",
+          "filename": "frame-22.jpg",
+          "url": "/placeholders/plate-8.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-23",
+          "filename": "frame-23.jpg",
+          "url": "/placeholders/plate-9.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        },
+        {
+          "id": "demo-img-24",
+          "filename": "frame-24.jpg",
+          "url": "/placeholders/plate-10.svg",
+          "uploadedAt": "2026-09-08T19:12:44.096Z"
+        }
+      ],
+      "selections": [
+        "demo-img-2",
+        "demo-img-7"
+      ],
+      "selectionNote": "",
+      "selectionSubmittedAt": null,
+      "createdAt": "2026-09-08T19:12:44.096Z"
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "rkjevj4akln2",
+      "name": "Rinash",
+      "email": "test@mail.com",
+      "phone": "8778804498",
+      "category": "Maternity",
+      "eventDate": "2026-09-19",
+      "message": "Test Scene",
+      "createdAt": "2026-09-19T05:09:22.908Z",
+      "status": "new"
+    }
+  ]
+}
