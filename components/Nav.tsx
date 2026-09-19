@@ -103,7 +103,7 @@ export function Nav() {
           <Link
             href="/gallery"
             className={clsx(
-              "hidden border px-4 py-2 font-mono text-[9px] uppercase tracking-[0.15em] transition-all duration-300 md:block",
+              "hidden border px-4 py-2 font-mono text-[10px] uppercase tracking-[0.15em] transition-all duration-300 md:block",
               isActive("/gallery")
                 ? "border-bone bg-bone text-void"
                 : "border-bone/25 text-stone hover:border-bone hover:text-bone"

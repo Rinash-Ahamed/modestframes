@@ -30,7 +30,7 @@ export function AdminHeader() {
       <div className="container-studio grid h-[72px] grid-cols-[1fr_auto] items-center md:grid-cols-[1fr_auto_1fr]">
         <Link href="/admin/dashboard" className="flex w-fit items-center gap-3" aria-label="ModestFrames admin overview">
           <Image src="/icon.png" alt="" width={512} height={512} className="h-8 w-8 brightness-200" />
-          <span className="hidden font-mono text-[9px] uppercase tracking-[0.18em] text-smoke sm:inline">Studio desk</span>
+          <span className="hidden font-mono text-[10px] uppercase tracking-[0.18em] text-smoke sm:inline">Studio desk</span>
         </Link>
 
         <nav className="hidden h-full items-center gap-8 md:flex" aria-label="Admin navigation">
@@ -53,7 +53,7 @@ export function AdminHeader() {
           <Link
             href="/"
             target="_blank"
-            className="hidden items-center gap-1.5 font-mono text-[9px] uppercase tracking-[0.1em] text-smoke transition-colors hover:text-bone sm:flex"
+            className="hidden items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.1em] text-smoke transition-colors hover:text-bone sm:flex"
           >
             View site <ArrowUpRight size={13} />
           </Link>
@@ -74,7 +74,7 @@ export function AdminHeader() {
             key={link.href}
             href={link.href}
             className={clsx(
-              "relative py-3 font-mono text-[9px] uppercase tracking-[0.14em]",
+              "relative py-3 font-mono text-[10px] uppercase tracking-[0.14em]",
               isActive(link.href) ? "text-bone" : "text-smoke"
             )}
           >

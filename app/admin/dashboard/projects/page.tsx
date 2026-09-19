@@ -10,13 +10,13 @@ export default function AdminProjectsPage() {
     <div className="space-y-8">
       <header className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
         <div>
-          <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-smoke">Gallery management</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-smoke">Gallery management</p>
           <h1 className="mt-2 font-display text-4xl font-black tracking-tight text-bone">Projects</h1>
           <p className="mt-2 font-editorial text-lg text-stone">Every client shoot from upload through final selection.</p>
         </div>
         <Link
           href="/admin/dashboard/projects/new"
-          className="flex w-fit items-center gap-2 border border-bone bg-bone px-5 py-3 font-mono text-[9px] uppercase tracking-[0.12em] text-void transition-colors hover:bg-transparent hover:text-bone"
+          className="flex w-fit items-center gap-2 border border-bone bg-bone px-5 py-3 font-mono text-[10px] uppercase tracking-[0.12em] text-void transition-colors hover:bg-transparent hover:text-bone"
         >
           <Plus size={14} /> New project
         </Link>
@@ -31,12 +31,12 @@ export default function AdminProjectsPage() {
           >
             <div className="min-w-0">
               <p className="truncate font-display text-lg font-bold text-bone">{project.clientNames}</p>
-              <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.06em] text-smoke">
+              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.06em] text-smoke">
                 {project.category} &middot; {new Date(project.shootDate).toLocaleDateString("en-IN")} &middot; {project.images.length} images
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <p className="font-mono text-[9px] uppercase tracking-[0.06em] text-stone">
+              <p className="font-mono text-[10px] uppercase tracking-[0.06em] text-stone">
                 {project.selections.length}/{project.maxSelections} selected
               </p>
               <StatusPill status={project.status} />

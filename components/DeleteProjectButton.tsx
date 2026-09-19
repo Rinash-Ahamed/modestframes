@@ -22,7 +22,7 @@ export function DeleteProjectButton({ projectId, clientNames }: { projectId: str
     <button
       onClick={onDelete}
       disabled={busy}
-      className="flex items-center gap-1.5 font-mono text-[8px] uppercase tracking-[0.08em] text-smoke transition-colors hover:text-red-400"
+      className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-smoke transition-colors hover:text-red-400"
     >
       <Trash2 size={13} /> {busy ? "Deleting…" : "Delete project"}
     </button>

@@ -53,7 +53,7 @@ export function ImageGridAdmin({
           <div key={img.id} className="group relative aspect-[4/5] overflow-hidden border border-bone/10 bg-ash">
             <Image src={img.url} alt={img.filename} fill sizes="200px" className="object-cover transition-transform duration-700 ease-studio group-hover:scale-[1.025]" />
             {isSelected && (
-              <span className="absolute left-2 top-2 border border-bone/30 bg-void/80 px-2 py-1 font-mono text-[8px] uppercase tracking-[0.08em] text-bone backdrop-blur-sm">
+              <span className="absolute left-2 top-2 border border-bone/30 bg-void/80 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.08em] text-bone backdrop-blur-sm">
                 selected
               </span>
             )}

@@ -91,7 +91,7 @@ export function NewProjectForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="border border-bone bg-bone px-6 py-3 font-mono text-[9px] uppercase tracking-[0.12em] text-void transition-colors hover:bg-transparent hover:text-bone disabled:opacity-50"
+        className="border border-bone bg-bone px-6 py-3 font-mono text-[10px] uppercase tracking-[0.12em] text-void transition-colors hover:bg-transparent hover:text-bone disabled:opacity-50"
       >
         {status === "loading" ? "Creating…" : "Create project"}
       </button>

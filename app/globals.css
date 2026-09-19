@@ -54,6 +54,8 @@ body {
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer base {
@@ -215,9 +217,15 @@ body {
   margin-bottom: 0.5rem;
   color: #949494;
   font-family: var(--font-mono);
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #7e7e7e;
+  opacity: 1;
 }
 
 @keyframes admin-page-enter {

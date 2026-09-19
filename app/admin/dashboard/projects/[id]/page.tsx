@@ -17,13 +17,13 @@ export default async function AdminProjectDetailPage({ params }: { params: Promi
   return (
     <div className="space-y-8">
       <div>
-        <Link href="/admin/dashboard/projects" className="font-mono text-[9px] uppercase tracking-[0.12em] text-smoke hover:text-bone">
+        <Link href="/admin/dashboard/projects" className="font-mono text-[10px] uppercase tracking-[0.12em] text-smoke hover:text-bone">
           ← Projects
         </Link>
         <div className="mt-4 flex flex-wrap items-start justify-between gap-4">
           <div>
             <h1 className="font-display text-4xl font-black tracking-tight text-bone">{project.clientNames}</h1>
-            <p className="mt-2 font-mono text-[9px] uppercase tracking-[0.08em] text-smoke">
+            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.08em] text-smoke">
               {project.category} · {new Date(project.shootDate).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}
             </p>
           </div>

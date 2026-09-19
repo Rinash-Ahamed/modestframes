@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CATEGORY_INFO } from "@/lib/site";
 import { studio } from "@/lib/site";
 
@@ -7,7 +8,22 @@ export function Footer() {
     <footer className="border-t border-bone/10 bg-void">
       <div className="container-studio grid gap-12 py-16 md:grid-cols-4 md:py-24">
         <div className="md:col-span-2">
-          <p className="font-display font-black text-2xl uppercase tracking-[0.14em] text-bone">{studio.name}</p>
+          <Link href="/" aria-label="ModestFrames home" className="group flex w-fit items-center gap-4">
+            <Image
+              src="/icon.png"
+              alt=""
+              width={512}
+              height={512}
+              className="h-12 w-12 shrink-0 brightness-200 transition-[filter] duration-300 group-hover:brightness-[2.5]"
+            />
+            <Image
+              src="/typeface-nav.png"
+              alt="ModestFrames by Mad"
+              width={1200}
+              height={293}
+              className="h-auto w-[190px] brightness-150 transition-[filter] duration-300 group-hover:brightness-200 sm:w-[220px]"
+            />
+          </Link>
           <p className="mt-4 max-w-sm font-editorial text-xl italic leading-snug text-stone">{studio.tagline}</p>
           <p className="font-editorial mt-8 text-lg text-stone">
             {studio.city}, {studio.region} - available for travel
@@ -18,7 +34,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
-              className="flex h-9 w-9 items-center justify-center border border-graphite font-mono text-[9px] text-smoke transition-colors duration-300 hover:border-bone hover:text-bone"
+              className="flex h-9 w-9 items-center justify-center border border-graphite font-mono text-[10px] text-smoke transition-colors duration-300 hover:border-bone hover:text-bone"
             >
               IG
             </a>
@@ -27,7 +43,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"
-              className="flex h-9 w-9 items-center justify-center border border-graphite font-mono text-[9px] text-smoke transition-colors duration-300 hover:border-bone hover:text-bone"
+              className="flex h-9 w-9 items-center justify-center border border-graphite font-mono text-[10px] text-smoke transition-colors duration-300 hover:border-bone hover:text-bone"
             >
               WA
             </a>
@@ -78,7 +94,7 @@ export function Footer() {
       </div>
 
       <div className="container-studio flex flex-col gap-3 border-t border-bone/10 py-6 font-mono text-[10px] text-smoke md:flex-row md:items-center md:justify-between">
-        <p>© {new Date().getFullYear()} {studio.fullName}. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} {studio.fullName}. All rights reserved.</p>
         <Link href="/admin/login" className="text-smoke transition-colors hover:text-stone">
           Studio Login
         </Link>

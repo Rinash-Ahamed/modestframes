@@ -36,7 +36,7 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="border border-silver-dim/60 p-8">
+      <div className="border border-silver-dim/60 p-8" role="status">
         <p className="font-editorial text-2xl italic text-bone">Message received.</p>
         <p className="font-editorial mt-3 text-lg leading-relaxed text-stone">
           Thank you for reaching out. We reply to every enquiry within two working days - usually sooner.
@@ -47,6 +47,7 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="space-y-6">
+      <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-smoke">Fields marked * are required</p>
       <div className="grid gap-6 sm:grid-cols-2">
         <Field label="Full name" name="name" required />
         <Field label="Email" name="email" type="email" required />
@@ -73,7 +74,7 @@ export function ContactForm() {
       </label>
 
       <label className="block">
-        <span className="text-xs text-stone">Tell us about your day</span>
+        <span className="text-xs text-stone">Tell us about your day *</span>
         <textarea
           name="message"
           required
@@ -83,12 +84,12 @@ export function ContactForm() {
         />
       </label>
 
-      {status === "error" && <p className="font-editorial text-lg text-red-400">{error}</p>}
+      {status === "error" && <p className="font-editorial text-lg text-red-400" role="alert">{error}</p>}
 
       <button
         type="submit"
         disabled={status === "sending"}
-        className="font-mono border border-bone/30 px-8 py-3.5 text-xs uppercase tracking-[0.18em] text-bone transition-all duration-500 ease-studio hover:border-silver hover:text-silver disabled:opacity-50"
+        className="border border-bone bg-bone px-8 py-3.5 font-mono text-xs uppercase tracking-[0.18em] text-void transition-all duration-500 ease-studio hover:bg-transparent hover:text-bone disabled:opacity-50"
       >
         {status === "sending" ? "Sending…" : "Send enquiry"}
       </button>
@@ -120,6 +121,8 @@ function Field({
         type={type}
         required={required}
         min={min}
+        inputMode={type === "tel" ? "tel" : undefined}
+        autoComplete={name === "name" ? "name" : name === "email" ? "email" : name === "phone" ? "tel" : undefined}
         className="mt-2 w-full border border-bone/20 bg-transparent px-4 py-3 text-sm text-bone outline-none transition-colors focus:border-silver"
       />
     </label>

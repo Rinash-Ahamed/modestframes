@@ -88,7 +88,7 @@ export function HomeHero() {
               View the portfolio
             </span>
             <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
-              →
+              &rarr;
             </span>
           </Link>
           <Link

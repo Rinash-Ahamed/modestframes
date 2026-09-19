@@ -36,7 +36,7 @@ export function AdminLoginForm() {
       <div className="flex h-11 w-11 items-center justify-center border border-bone/15 text-bone">
         <Lock size={17} strokeWidth={1.5} />
       </div>
-      <p className="mt-6 font-mono text-[9px] uppercase tracking-[0.18em] text-smoke">Private administration</p>
+      <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-smoke">Private administration</p>
       <h1 className="mt-2 font-display text-4xl font-black tracking-tight text-bone">Studio login</h1>
       <p className="mt-3 max-w-xs font-editorial text-lg leading-relaxed text-stone">
         Admin access for managing projects, uploads, and client selections.
@@ -53,7 +53,7 @@ export function AdminLoginForm() {
         <button
           type="submit"
           disabled={status === "loading" || !password}
-          className="mt-4 w-full border border-bone bg-bone px-6 py-3.5 font-mono text-[9px] uppercase tracking-[0.12em] text-void transition-colors hover:bg-transparent hover:text-bone disabled:opacity-40"
+          className="mt-4 w-full border border-bone bg-bone px-6 py-3.5 font-mono text-[10px] uppercase tracking-[0.12em] text-void transition-colors hover:bg-transparent hover:text-bone disabled:opacity-40"
         >
           {status === "loading" ? "Signing in…" : "Sign in"}
         </button>

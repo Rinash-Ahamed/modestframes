@@ -69,7 +69,7 @@ export function ProjectUploader({ projectId }: { projectId: string }) {
             browse files
           </button>
         </p>
-        <p className="font-mono text-[8px] uppercase tracking-[0.08em] text-smoke">JPEG, PNG, WebP, or AVIF - up to 25MB each</p>
+        <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-smoke">JPEG, PNG, WebP, or AVIF - up to 25MB each</p>
         <input
           ref={inputRef}
           type="file"
@@ -80,7 +80,7 @@ export function ProjectUploader({ projectId }: { projectId: string }) {
         />
       </div>
       {(uploading || message) && (
-        <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.06em] text-stone">{uploading ? "Uploading..." : message}</p>
+        <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.06em] text-stone">{uploading ? "Uploading..." : message}</p>
       )}
     </div>
   );
