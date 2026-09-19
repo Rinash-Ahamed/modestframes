@@ -99,7 +99,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               Considering {cat.name.toLowerCase()} coverage?
             </p>
             <h2 className="mx-auto mt-4 max-w-xl text-balance font-display text-3xl font-black tracking-tight text-bone md:text-4xl">
-              Let&rsquo;s see if your date is free.
+              Let&rsquo;s see if <span className="heading-lean">your date is free.</span>
             </h2>
             <div className="mt-8 flex justify-center">
               <Cta href="/contact">Check availability</Cta>
@@ -109,7 +109,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
         <section className="container-studio py-16 md:py-24">
           <Reveal className="mb-8">
-            <h2 className="font-display text-2xl font-black tracking-tight text-bone">Other coverage</h2>
+            <h2 className="font-display text-2xl font-black tracking-tight text-bone">
+              Other <span className="heading-lean">coverage</span>
+            </h2>
           </Reveal>
           <div className="flex flex-wrap gap-3">
             {otherCategories.map((c) => (

@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { studio } from "@/lib/site";
 import { CameraLensIntro } from "@/components/CameraLensIntro";
 import { PublicPageMotion } from "@/components/PublicPageMotion";
 
 export const metadata: Metadata = {
+  applicationName: studio.fullName,
   title: `${studio.fullName} - Wedding, Maternity & Family Photography in ${studio.city}`,
   description: studio.tagline,
   metadataBase: new URL("https://example.com"),
@@ -13,6 +14,15 @@ export const metadata: Metadata = {
     description: studio.tagline,
     type: "website",
   },
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "512x512" }],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#080808",
 };
 
 export default function RootLayout({

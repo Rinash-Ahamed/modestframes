@@ -21,7 +21,7 @@ export default function PortfolioPage() {
               <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone">Portfolio</span>
             </div>
             <h1 className="mt-6 max-w-2xl text-balance font-display text-5xl font-black tracking-tight text-bone md:text-6xl">
-              Nine kinds of days, photographed the same careful way.
+              Nine kinds of days, <span className="heading-lean">photographed the same careful way.</span>
             </h1>
           </Reveal>
         </section>

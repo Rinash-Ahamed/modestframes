@@ -33,8 +33,9 @@ export default function HomePage() {
         {/* Editorial intro - asymmetric two-column statement */}
         <section className="container-studio py-24 md:py-36">
           <Reveal className="grid gap-10 md:grid-cols-12 md:gap-6">
-            <p className="font-editorial text-3xl italic leading-snug text-bone md:col-span-6 md:text-4xl">
-              A wedding is one continuous, unrepeatable day. Everything here is built around not missing it.
+            <p className="font-display text-3xl leading-snug text-bone md:col-span-6 md:text-4xl">
+              <span className="font-display font-bold not-italic tracking-tight">A wedding is one continuous, unrepeatable day.</span>{" "}
+              <span className="heading-lean">Everything here is built around not missing it.</span>
             </p>
             <div className="md:col-span-5 md:col-start-8">
               <p className="font-editorial text-lg leading-relaxed text-stone">
@@ -57,7 +58,9 @@ export default function HomePage() {
           <Reveal className="mb-14 flex items-end justify-between gap-6">
             <div>
               <Eyebrow>Coverage</Eyebrow>
-              <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-bone md:text-5xl">Nine kinds of days</h2>
+              <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-bone md:text-5xl">
+                Nine kinds <span className="heading-lean">of days</span>
+              </h2>
             </div>
             <Link href="/portfolio" className="font-mono tracking-[0.04em] hidden text-xs text-stone hover:text-silver md:block">
               View full portfolio
@@ -114,7 +117,7 @@ export default function HomePage() {
           <Reveal className="mb-16">
             <Eyebrow>Process</Eyebrow>
             <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-bone md:text-5xl">
-              How a shoot comes together
+              How a shoot <span className="heading-lean">comes together</span>
             </h2>
           </Reveal>
           <div className="divide-y divide-bone/10 border-y border-bone/10">
@@ -164,7 +167,7 @@ export default function HomePage() {
         <section className="container-studio py-28 text-center md:py-40">
           <Reveal>
             <h2 className="mx-auto max-w-2xl text-balance font-display text-4xl font-black tracking-tight text-bone md:text-5xl">
-              If your date is worth remembering, it&rsquo;s worth beginning with a conversation.
+              If your date is worth remembering, <span className="heading-lean">it&rsquo;s worth beginning with a conversation.</span>
             </h2>
             <div className="mt-10 flex justify-center">
               <Cta href="/contact">Start the conversation</Cta>

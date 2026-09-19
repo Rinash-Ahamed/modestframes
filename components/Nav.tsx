@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
@@ -66,9 +67,14 @@ export function Nav() {
     >
       <div className="container-studio grid h-[76px] grid-cols-[1fr_auto] items-center md:grid-cols-[1fr_auto_1fr]">
         <Link href="/" aria-label="ModestFrames home" className="group w-fit">
-          <span className="font-display text-xl font-black tracking-[-0.035em] text-bone sm:text-2xl">
-            Modest<span className="text-stone transition-colors duration-300 group-hover:text-bone">Frames</span>
-          </span>
+          <Image
+            src="/typeface-nav.png"
+            alt="ModestFrames by Mad"
+            width={1200}
+            height={293}
+            priority
+            className="h-auto w-[150px] brightness-150 transition-[filter] duration-300 group-hover:brightness-200 sm:w-[176px]"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex lg:gap-11" aria-label="Main navigation">

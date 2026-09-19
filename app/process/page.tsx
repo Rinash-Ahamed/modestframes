@@ -21,7 +21,7 @@ export default function ProcessPage() {
               <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone">Process</span>
             </div>
             <h1 className="mt-6 max-w-2xl text-balance font-display text-5xl font-black tracking-tight text-bone md:text-6xl">
-              From first message to final delivery.
+              From first message <span className="heading-lean">to final delivery.</span>
             </h1>
           </Reveal>
         </section>
@@ -53,7 +53,9 @@ export default function ProcessPage() {
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone">FAQ</span>
               </div>
-              <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-bone">Common questions</h2>
+              <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-bone">
+                Common <span className="heading-lean">questions</span>
+              </h2>
               <p className="font-editorial mt-4 text-lg text-stone">
                 About your private gallery, selections, and turnaround. Anything else,{" "}
                 <Link href="/contact" className="text-silver underline decoration-silver-dim underline-offset-4">

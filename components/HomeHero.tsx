@@ -26,7 +26,10 @@ const fadeUp: Variants = {
 
 // The tagline broken into short lines so each can mask-reveal on its own -
 // a slower, more deliberate entrance than a single block fading up.
-const TAGLINE_LINES = ["Photography for the moment", "that already knew it mattered."];
+const TAGLINE_LINES = [
+  { text: "Photography for the moment", lean: false },
+  { text: "that already knew it mattered.", lean: true },
+];
 
 export function HomeHero() {
   return (
@@ -62,13 +65,15 @@ export function HomeHero() {
         className="container-studio relative z-10 flex w-full flex-col gap-10 pb-20 pt-40 md:pb-28"
       >
         <div>
-          {TAGLINE_LINES.map((text) => (
-            <div key={text} className="overflow-hidden">
+          {TAGLINE_LINES.map((line_) => (
+            <div key={line_.text} className="overflow-hidden">
               <motion.h1
                 variants={line}
-                className="text-balance font-display text-5xl font-black tracking-tight leading-[1.08] text-bone sm:text-6xl md:text-[5.5rem] md:leading-[1.05]"
+                className={`text-balance text-5xl leading-[1.08] sm:text-6xl md:text-[5.5rem] md:leading-[1.05] ${
+                  line_.lean ? "heading-lean" : "font-display font-black tracking-tight text-bone"
+                }`}
               >
-                {text}
+                {line_.text}
               </motion.h1>
             </div>
           ))}

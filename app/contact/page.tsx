@@ -21,7 +21,7 @@ export default function ContactPage() {
               <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone">Contact</span>
             </div>
             <h1 className="mt-6 text-balance font-display text-5xl font-black tracking-tight text-bone md:text-6xl">
-              Let&rsquo;s talk about your date.
+              Let&rsquo;s talk <span className="heading-lean">about your date.</span>
             </h1>
             <p className="font-editorial mt-6 text-lg leading-relaxed text-stone">
               Availability is confirmed on a first-enquiry basis, especially in wedding season. The sooner you

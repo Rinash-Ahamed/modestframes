@@ -45,7 +45,7 @@ export default function StudioPage() {
               <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone">The Studio</span>
             </div>
             <h1 className="mt-6 text-balance font-display text-5xl font-black tracking-tight text-bone md:text-6xl">
-              A studio built around one photographer&rsquo;s eye, not a package menu.
+              A studio built around <span className="heading-lean">one photographer&rsquo;s eye, not a package menu.</span>
             </h1>
           </Reveal>
           <Reveal delay={0.08} className="md:col-span-5 md:col-start-8">
@@ -74,7 +74,9 @@ export default function StudioPage() {
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone">Approach</span>
               </div>
-              <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-bone">How we work</h2>
+              <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-bone">
+                How <span className="heading-lean">we work</span>
+              </h2>
             </Reveal>
             <div className="grid gap-x-8 gap-y-14 md:grid-cols-2">
               {principles.map((p, i) => (
@@ -93,7 +95,7 @@ export default function StudioPage() {
         <section className="container-studio py-24 text-center md:py-32">
           <Reveal>
             <h2 className="mx-auto max-w-xl text-balance font-display text-4xl font-black tracking-tight text-bone">
-              Want to know if we&rsquo;re free on your date?
+              Want to know <span className="heading-lean">if we&rsquo;re free on your date?</span>
             </h2>
             <div className="mt-8 flex justify-center">
               <Cta href="/contact">Ask about availability</Cta>

@@ -107,6 +107,14 @@ body {
   text-wrap: balance;
 }
 
+.heading-lean {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
 /* A framed/matted image treatment - a thin hairline set inward from the
    image edge with breathing room, the way a real print sits inside a mat
    and frame rather than bleeding to the edge of a card. This is the
