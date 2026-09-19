@@ -6,9 +6,11 @@ export const metadata = {
 
 export default function AdminDashboardLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-void">
+    <div className="admin-shell min-h-screen bg-void">
       <AdminHeader />
-      <main className="container-studio py-10">{children}</main>
+      <main className="container-studio py-8 md:py-12">
+        <div className="admin-page">{children}</div>
+      </main>
     </div>
   );
 }

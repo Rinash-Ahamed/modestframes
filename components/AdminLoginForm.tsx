@@ -32,10 +32,13 @@ export function AdminLoginForm() {
   }
 
   return (
-    <div className="mx-auto flex max-w-sm flex-col items-center border border-bone/10 bg-charcoal/60 px-8 py-14 text-center">
-      <Lock size={20} className="text-silver" />
-      <h1 className="mt-5 font-display text-3xl font-black tracking-tight text-bone">Studio Login</h1>
-      <p className="font-editorial mt-3 text-lg leading-relaxed text-stone">
+    <div className="admin-panel mx-auto flex w-full max-w-md flex-col items-center px-7 py-12 text-center sm:px-10">
+      <div className="flex h-11 w-11 items-center justify-center border border-bone/15 text-bone">
+        <Lock size={17} strokeWidth={1.5} />
+      </div>
+      <p className="mt-6 font-mono text-[9px] uppercase tracking-[0.18em] text-smoke">Private administration</p>
+      <h1 className="mt-2 font-display text-4xl font-black tracking-tight text-bone">Studio login</h1>
+      <p className="mt-3 max-w-xs font-editorial text-lg leading-relaxed text-stone">
         Admin access for managing projects, uploads, and client selections.
       </p>
       <form onSubmit={onSubmit} className="mt-8 w-full">
@@ -44,13 +47,13 @@ export function AdminLoginForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
-          className="w-full border border-bone/20 bg-transparent px-4 py-3.5 text-center text-sm text-bone outline-none transition-colors focus:border-silver"
+          className="admin-field py-3.5 text-center"
         />
         {status === "error" && <p className="font-editorial mt-3 text-lg text-red-400">{error}</p>}
         <button
           type="submit"
           disabled={status === "loading" || !password}
-          className="mt-5 w-full border border-silver-dim px-6 py-3.5 text-sm text-silver transition-colors duration-300 hover:border-silver hover:bg-silver hover:text-void disabled:opacity-40"
+          className="mt-4 w-full border border-bone bg-bone px-6 py-3.5 font-mono text-[9px] uppercase tracking-[0.12em] text-void transition-colors hover:bg-transparent hover:text-bone disabled:opacity-40"
         >
           {status === "loading" ? "Signing in…" : "Sign in"}
         </button>

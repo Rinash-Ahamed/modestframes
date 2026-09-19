@@ -45,15 +45,15 @@ export function ImageGridAdmin({
   }
 
   return (
-    <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-6">
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 xl:grid-cols-6">
       {images.map((img) => {
         const isCover = img.id === coverImageId;
         const isSelected = selections.includes(img.id);
         return (
-          <div key={img.id} className="group relative aspect-[4/5] overflow-hidden bg-ash">
-            <Image src={img.url} alt={img.filename} fill sizes="200px" className="object-cover" />
+          <div key={img.id} className="group relative aspect-[4/5] overflow-hidden border border-bone/10 bg-ash">
+            <Image src={img.url} alt={img.filename} fill sizes="200px" className="object-cover transition-transform duration-700 ease-studio group-hover:scale-[1.025]" />
             {isSelected && (
-              <span className="absolute left-1.5 top-1.5 border border-silver bg-void/70 px-1.5 py-0.5 text-[10px] text-silver">
+              <span className="absolute left-2 top-2 border border-bone/30 bg-void/80 px-2 py-1 font-mono text-[8px] uppercase tracking-[0.08em] text-bone backdrop-blur-sm">
                 selected
               </span>
             )}

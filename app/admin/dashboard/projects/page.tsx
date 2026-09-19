@@ -8,51 +8,47 @@ export default function AdminProjectsPage() {
 
   return (
     <div className="space-y-8">
-      <div className="flex items-center justify-between">
+      <header className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
         <div>
-          <h1 className="font-display text-3xl font-black tracking-tight text-bone">Projects</h1>
-          <p className="font-editorial mt-1 text-lg text-stone">Every client shoot, from upload through final selection.</p>
+          <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-smoke">Gallery management</p>
+          <h1 className="mt-2 font-display text-4xl font-black tracking-tight text-bone">Projects</h1>
+          <p className="mt-2 font-editorial text-lg text-stone">Every client shoot from upload through final selection.</p>
         </div>
         <Link
           href="/admin/dashboard/projects/new"
-          className="font-mono tracking-[0.04em] flex items-center gap-2 border border-silver-dim px-5 py-2.5 text-xs text-silver transition-colors hover:border-silver hover:bg-silver hover:text-void"
+          className="flex w-fit items-center gap-2 border border-bone bg-bone px-5 py-3 font-mono text-[9px] uppercase tracking-[0.12em] text-void transition-colors hover:bg-transparent hover:text-bone"
         >
-          <Plus size={16} /> New project
+          <Plus size={14} /> New project
         </Link>
-      </div>
+      </header>
 
-      <div className="divide-y divide-bone/10 border-y border-bone/10">
-        {projects.map((p) => (
+      <section className="admin-panel divide-y divide-bone/10">
+        {projects.map((project) => (
           <Link
-            key={p.id}
-            href={`/admin/dashboard/projects/${p.id}`}
-            className="flex flex-col gap-2 py-5 hover:bg-bone/[0.02] sm:flex-row sm:items-center sm:justify-between"
+            key={project.id}
+            href={`/admin/dashboard/projects/${project.id}`}
+            className="grid gap-4 px-5 py-5 transition-colors hover:bg-bone/[0.025] md:grid-cols-[1fr_auto] md:items-center md:px-6"
           >
-            <div>
-              <p className="font-editorial text-bone">{p.clientNames}</p>
-              <p className="font-editorial text-base text-stone">
-                {p.category} · {new Date(p.shootDate).toLocaleDateString("en-IN")} · {p.images.length} images ·
-                code {p.accessCode}
+            <div className="min-w-0">
+              <p className="truncate font-display text-lg font-bold text-bone">{project.clientNames}</p>
+              <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.06em] text-smoke">
+                {project.category} &middot; {new Date(project.shootDate).toLocaleDateString("en-IN")} &middot; {project.images.length} images
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <p className="font-editorial text-base text-stone">
-                {p.selections.length} / {p.maxSelections} selected
+              <p className="font-mono text-[9px] uppercase tracking-[0.06em] text-stone">
+                {project.selections.length}/{project.maxSelections} selected
               </p>
-              <StatusPill status={p.status} />
+              <StatusPill status={project.status} />
             </div>
           </Link>
         ))}
         {projects.length === 0 && (
-          <p className="font-editorial py-10 text-center text-lg text-stone">
-            No projects yet.{" "}
-            <Link href="/admin/dashboard/projects/new" className="text-silver underline decoration-silver-dim">
-              Create your first project
-            </Link>
-            .
+          <p className="px-6 py-14 text-center font-editorial text-lg text-stone">
+            No projects yet. <Link href="/admin/dashboard/projects/new" className="text-bone underline underline-offset-4">Create your first project</Link>.
           </p>
         )}
-      </div>
+      </section>
     </div>
   );
 }

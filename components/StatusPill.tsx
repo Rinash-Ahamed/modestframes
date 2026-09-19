@@ -6,7 +6,7 @@ export function StatusPill({ status }: { status: string }) {
     delivered: "text-stone border-stone/40",
   };
   return (
-    <span className={`border px-2.5 py-1 text-[11px] capitalize ${map[status] || "text-stone border-stone/40"}`}>
+    <span className={`shrink-0 border px-2.5 py-1 font-mono text-[8px] uppercase tracking-[0.1em] ${map[status] || "text-stone border-stone/40"}`}>
       {status}
     </span>
   );

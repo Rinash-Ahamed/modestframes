@@ -32,25 +32,25 @@ export function NewProjectForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="max-w-xl space-y-6">
+    <form onSubmit={onSubmit} className="admin-panel max-w-2xl space-y-6 p-5 md:p-7">
       <label className="block">
-        <span className="text-xs text-stone">Client name(s) *</span>
+        <span className="admin-label">Client name(s) *</span>
         <input
           name="clientNames"
           required
           placeholder="e.g. Anika & Rohan"
-          className="mt-2 w-full border border-bone/20 bg-transparent px-4 py-3 text-sm text-bone outline-none focus:border-silver"
+          className="admin-field"
         />
       </label>
 
       <div className="grid gap-6 sm:grid-cols-2">
         <label className="block">
-          <span className="text-xs text-stone">Category *</span>
+          <span className="admin-label">Category *</span>
           <select
             name="category"
             required
             defaultValue=""
-            className="mt-2 w-full border border-bone/20 bg-transparent px-4 py-3 text-sm text-bone outline-none focus:border-silver"
+            className="admin-field"
           >
             <option value="" disabled className="bg-charcoal">
               Select…
@@ -64,26 +64,26 @@ export function NewProjectForm() {
         </label>
 
         <label className="block">
-          <span className="text-xs text-stone">Shoot date *</span>
+          <span className="admin-label">Shoot date *</span>
           <input
             name="shootDate"
             type="date"
             required
-            className="mt-2 w-full border border-bone/20 bg-transparent px-4 py-3 text-sm text-bone outline-none focus:border-silver"
+            className="admin-field"
           />
         </label>
       </div>
 
       <label className="block max-w-xs">
-        <span className="text-xs text-stone">Included selections</span>
+        <span className="admin-label">Included selections</span>
         <input
           name="maxSelections"
           type="number"
           min={1}
           defaultValue={50}
-          className="mt-2 w-full border border-bone/20 bg-transparent px-4 py-3 text-sm text-bone outline-none focus:border-silver"
+          className="admin-field"
         />
-        <span className="mt-1 block text-xs text-smoke">How many final images this package includes.</span>
+        <span className="mt-2 block font-editorial text-sm text-smoke">How many final images this package includes.</span>
       </label>
 
       {status === "error" && <p className="font-editorial text-lg text-red-400">{error}</p>}
@@ -91,7 +91,7 @@ export function NewProjectForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="border border-silver-dim px-7 py-3 text-sm text-silver transition-colors hover:border-silver hover:bg-silver hover:text-void disabled:opacity-50"
+        className="border border-bone bg-bone px-6 py-3 font-mono text-[9px] uppercase tracking-[0.12em] text-void transition-colors hover:bg-transparent hover:text-bone disabled:opacity-50"
       >
         {status === "loading" ? "Creating…" : "Create project"}
       </button>

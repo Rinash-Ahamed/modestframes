@@ -6,17 +6,16 @@ export default function AdminInquiriesPage() {
 
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="font-display text-3xl font-black tracking-tight text-bone">Enquiries</h1>
-        <p className="font-editorial mt-1 text-lg text-stone">Messages submitted through the public contact form.</p>
-      </div>
+      <header>
+        <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-smoke">Contact requests</p>
+        <h1 className="mt-2 font-display text-4xl font-black tracking-tight text-bone">Enquiries</h1>
+        <p className="mt-2 font-editorial text-lg text-stone">Messages submitted through the public contact form.</p>
+      </header>
 
-      <div className="divide-y divide-bone/10 border-y border-bone/10">
-        {inquiries.map((i) => (
-          <InquiryRow key={i.id} inquiry={i} />
-        ))}
-        {inquiries.length === 0 && <p className="font-editorial py-10 text-center text-lg text-stone">No enquiries yet.</p>}
-      </div>
+      <section className="admin-panel divide-y divide-bone/10">
+        {inquiries.map((inquiry) => <InquiryRow key={inquiry.id} inquiry={inquiry} />)}
+        {inquiries.length === 0 && <p className="px-6 py-14 text-center font-editorial text-lg text-stone">No enquiries yet.</p>}
+      </section>
     </div>
   );
 }

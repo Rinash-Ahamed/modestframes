@@ -44,6 +44,19 @@
       animation: flashPulse 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
 
+    .brand-mark {
+      position: absolute;
+      left: 50%;
+      top: calc(100% + 18px);
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      transform: translateX(-50%);
+      filter: brightness(2.8);
+      pointer-events: none;
+      animation: brandMarkSequence 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
     svg {
       width: 100%;
       height: 100%;
@@ -95,6 +108,21 @@
       }
       100% {
         opacity: 0;
+      }
+    }
+
+    @keyframes brandMarkSequence {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 8px) scale(0.92);
+      }
+      18%, 72% {
+        opacity: 0.8;
+        transform: translate(-50%, 0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -4px) scale(0.98);
       }
     }
 
@@ -154,6 +182,7 @@
   <div class="loader-container">
     <!-- Warm Shutter Flash -->
     <div class="flash-overlay"></div>
+    <img class="brand-mark" src="/icon.png" alt="">
 
     <!-- Camera Lens Vector Graphics -->
     <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -18,11 +18,11 @@ export function CopyField({ label, value }: { label: string; value: string }) {
 
   return (
     <div>
-      <p className="font-editorial text-base text-stone">{label}</p>
+      <p className="admin-label">{label}</p>
       <button
         type="button"
         onClick={copy}
-        className="mt-1 flex items-center gap-2 border border-bone/15 px-3 py-2 text-sm text-bone transition-colors hover:border-silver-dim"
+        className="flex items-center gap-2 border border-bone/15 bg-void/40 px-3 py-2 font-mono text-xs text-bone transition-colors hover:border-bone/40"
       >
         <span className="max-w-[220px] truncate">{value}</span>
         {copied ? <Check size={14} className="text-silver" /> : <Copy size={14} className="text-stone" />}

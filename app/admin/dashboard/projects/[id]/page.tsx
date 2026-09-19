@@ -15,15 +15,15 @@ export default async function AdminProjectDetailPage({ params }: { params: Promi
   const galleryUrl = `/gallery/${project.slug}`;
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-8">
       <div>
-        <Link href="/admin/dashboard/projects" className="text-xs text-stone hover:text-silver">
+        <Link href="/admin/dashboard/projects" className="font-mono text-[9px] uppercase tracking-[0.12em] text-smoke hover:text-bone">
           ← Projects
         </Link>
-        <div className="mt-3 flex flex-wrap items-start justify-between gap-4">
+        <div className="mt-4 flex flex-wrap items-start justify-between gap-4">
           <div>
-            <h1 className="font-display text-3xl font-black tracking-tight text-bone">{project.clientNames}</h1>
-            <p className="font-editorial mt-1 text-lg text-stone">
+            <h1 className="font-display text-4xl font-black tracking-tight text-bone">{project.clientNames}</h1>
+            <p className="mt-2 font-mono text-[9px] uppercase tracking-[0.08em] text-smoke">
               {project.category} · {new Date(project.shootDate).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}
             </p>
           </div>
@@ -34,19 +34,19 @@ export default async function AdminProjectDetailPage({ params }: { params: Promi
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-4 border border-bone/10 p-6">
+      <section className="admin-panel flex flex-wrap gap-6 p-5 md:p-6">
         <CopyField label="Access code" value={project.accessCode} />
         <CopyField label="Gallery link" value={galleryUrl} />
         <div>
-          <p className="font-editorial text-base text-stone">Selections</p>
-          <p className="font-editorial mt-1 border border-bone/15 px-3 py-2 text-lg text-bone">
+          <p className="admin-label">Selections</p>
+          <p className="border border-bone/15 bg-void/40 px-3 py-2 font-mono text-xs text-bone">
             {project.selections.length} / {project.maxSelections}
           </p>
         </div>
-      </div>
+      </section>
 
       {project.selectionSubmittedAt && (
-        <div className="border border-silver-dim/40 bg-charcoal p-6">
+        <div className="admin-panel border-bone/20 p-5 md:p-6">
           <p className="font-editorial text-lg text-bone">
             Client submitted their selection on{" "}
             {new Date(project.selectionSubmittedAt).toLocaleDateString("en-IN", {
@@ -65,18 +65,18 @@ export default async function AdminProjectDetailPage({ params }: { params: Promi
         </div>
       )}
 
-      <div>
-        <h2 className="font-display font-bold tracking-tight text-lg text-bone">Upload proofs</h2>
-        <p className="font-editorial mt-1 text-lg text-stone">
+      <section className="admin-panel p-5 md:p-6">
+        <h2 className="font-display text-xl font-bold tracking-tight text-bone">Upload proofs</h2>
+        <p className="mt-1 font-editorial text-base text-stone">
           Uploaded images appear immediately in the client's private gallery.
         </p>
         <div className="mt-4">
           <ProjectUploader projectId={project.id} />
         </div>
-      </div>
+      </section>
 
-      <div>
-        <h2 className="font-display font-bold tracking-tight text-lg text-bone">
+      <section className="admin-panel p-5 md:p-6">
+        <h2 className="font-display text-xl font-bold tracking-tight text-bone">
           Images <span className="text-stone">({project.images.length})</span>
         </h2>
         <div className="mt-4">
@@ -87,7 +87,7 @@ export default async function AdminProjectDetailPage({ params }: { params: Promi
             selections={project.selections}
           />
         </div>
-      </div>
+      </section>
     </div>
   );
 }

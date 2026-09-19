@@ -58,18 +58,18 @@ export function ProjectUploader({ projectId }: { projectId: string }) {
           upload(e.dataTransfer.files);
         }}
         className={clsx(
-          "flex flex-col items-center justify-center gap-3 border border-dashed px-6 py-14 text-center transition-colors",
-          dragging ? "border-silver bg-silver/5" : "border-bone/20"
+          "flex flex-col items-center justify-center gap-3 border border-dashed bg-void/30 px-6 py-12 text-center transition-colors",
+          dragging ? "border-bone bg-bone/5" : "border-bone/15 hover:border-bone/30"
         )}
       >
         <UploadCloud size={22} className="text-stone" />
-        <p className="font-editorial text-lg text-stone">
+        <p className="font-editorial text-base text-stone">
           Drag proof images here, or{" "}
           <button type="button" onClick={() => inputRef.current?.click()} className="text-silver underline decoration-silver-dim">
             browse files
           </button>
         </p>
-        <p className="font-editorial text-base text-smoke">JPEG, PNG, WebP, or AVIF - up to 25MB each</p>
+        <p className="font-mono text-[8px] uppercase tracking-[0.08em] text-smoke">JPEG, PNG, WebP, or AVIF - up to 25MB each</p>
         <input
           ref={inputRef}
           type="file"
@@ -80,7 +80,7 @@ export function ProjectUploader({ projectId }: { projectId: string }) {
         />
       </div>
       {(uploading || message) && (
-        <p className="font-editorial mt-3 text-base text-stone">{uploading ? "Uploading…" : message}</p>
+        <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.06em] text-stone">{uploading ? "Uploading..." : message}</p>
       )}
     </div>
   );

@@ -5,11 +5,11 @@ export default function NewProjectPage() {
   return (
     <div className="space-y-8">
       <div>
-        <Link href="/admin/dashboard/projects" className="text-xs text-stone hover:text-silver">
+        <Link href="/admin/dashboard/projects" className="font-mono text-[9px] uppercase tracking-[0.12em] text-smoke hover:text-bone">
           ← Projects
         </Link>
-        <h1 className="mt-3 font-display text-3xl font-black tracking-tight text-bone">New project</h1>
-        <p className="font-editorial mt-1 text-lg text-stone">
+        <h1 className="mt-4 font-display text-4xl font-black tracking-tight text-bone">New project</h1>
+        <p className="mt-2 max-w-xl font-editorial text-lg text-stone">
           Creates a private gallery and a random access code you can share with the client.
         </p>
       </div>
