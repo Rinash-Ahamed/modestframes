@@ -7,9 +7,10 @@ import { Reveal } from "@/components/Reveal";
 import { Plate } from "@/components/Plate";
 import { PullQuote } from "@/components/PullQuote";
 import { Cta } from "@/components/Cta";
-import { process_, studio, CATEGORY_INFO } from "@/lib/site";
+import { studio, CATEGORY_INFO } from "@/lib/site";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { VisualOrbit } from "@/components/VisualOrbit";
+import { PhotographicProcess } from "@/components/PhotographicProcess";
 
 const spreads = [
   CATEGORY_INFO[0], // Wedding
@@ -148,24 +149,9 @@ export default function HomePage() {
               How a shoot <span className="heading-lean">comes together</span>
             </h2>
           </Reveal>
-          <div className="divide-y divide-bone/10 border-y border-bone/10">
-            {process_.map((p, i) => (
-              <Reveal key={p.step} delay={i * 0.05}>
-                <div className="group relative grid gap-2 overflow-hidden py-6 md:grid-cols-12 md:items-baseline md:gap-6">
-                  <span
-                    aria-hidden="true"
-                    className="numeral-ghost pointer-events-none absolute -left-2 -top-6 text-[5.5rem] transition-colors duration-500 group-hover:text-silver/10 md:text-[6.5rem]"
-                  >
-                    {p.step}
-                  </span>
-                  <h3 className="font-display font-bold tracking-tight relative text-xl text-bone md:col-span-3">{p.title}</h3>
-                  <p className="font-editorial relative text-lg leading-relaxed text-stone md:col-span-7 md:col-start-6">
-                    {p.body}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal>
+            <PhotographicProcess />
+          </Reveal>
         </section>
 
         {/* Testimonials */}
