@@ -7,7 +7,8 @@ import { Reveal } from "@/components/Reveal";
 import { Plate } from "@/components/Plate";
 import { PullQuote } from "@/components/PullQuote";
 import { Cta } from "@/components/Cta";
-import { process_, testimonials, studio, CATEGORY_INFO } from "@/lib/site";
+import { process_, studio, CATEGORY_INFO } from "@/lib/site";
+import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 
 const spreads = [
   CATEGORY_INFO[0], // Wedding
@@ -55,7 +56,7 @@ export default function HomePage() {
 
         {/* Coverage grid */}
         <section className="container-studio pb-24 md:pb-36">
-          <Reveal className="mb-14 flex items-end justify-between gap-6">
+          <Reveal kind="heading" className="mb-14 flex items-end justify-between gap-6">
             <div>
               <Eyebrow>Coverage</Eyebrow>
               <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-bone md:text-5xl">
@@ -66,7 +67,7 @@ export default function HomePage() {
               View full portfolio
             </Link>
           </Reveal>
-          <Reveal delay={0.08}>
+          <Reveal kind="media" delay={0.08}>
             <CoverageGrid />
           </Reveal>
           <Link href="/portfolio" className="font-mono tracking-[0.04em] mt-10 block text-xs text-stone hover:text-silver md:hidden">
@@ -74,47 +75,72 @@ export default function HomePage() {
           </Link>
         </section>
 
-        <PullQuote eyebrow="Philosophy">
+        <PullQuote>
           Most of what makes a gallery worth keeping isn&rsquo;t the posed frame. It&rsquo;s the fifteen minutes on
           either side of it, photographed like they mattered too.
         </PullQuote>
 
-        {/* Featured editorial spreads */}
+        {/* Featured editorial spreads — first 2 use asymmetric split, 3rd breaks to
+            full-width cinematic overlay to satisfy the zigzag alternation cap. */}
         <section className="bg-charcoal">
-          {spreads.map((s, i) => (
-            <Reveal key={s.slug}>
-              <div className="container-studio relative overflow-hidden py-20 md:py-28">
-                <span
-                  aria-hidden="true"
-                  className={`numeral-ghost absolute -top-6 select-none text-[9rem] sm:text-[13rem] md:text-[16rem] ${
-                    i % 2 === 1 ? "-right-4 md:-right-8" : "-left-4 md:-left-8"
-                  }`}
-                >
-                  0{i + 1}
-                </span>
-                <div className="relative grid gap-10 md:grid-cols-12 md:items-center md:gap-12">
-                  <div className={`plate-frame md:col-span-7 ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                    <Plate index={s.plate} alt={`${s.name} sample`} className="aspect-[4/3] w-full" />
-                  </div>
-                  <div className={`md:col-span-4 ${i % 2 === 1 ? "md:order-1 md:col-start-1" : "md:col-start-9"}`}>
-                    <h3 className="font-display text-4xl font-black tracking-tight text-bone md:text-5xl">{s.name}</h3>
-                    <p className="font-editorial mt-5 text-lg leading-relaxed text-stone">{s.description}</p>
-                    <Link
-                      href={`/portfolio/${s.slug}`}
-                      className="font-mono tracking-[0.04em] mt-6 inline-block text-xs text-silver underline decoration-silver-dim underline-offset-4"
-                    >
-                      See {s.name.toLowerCase()} work
-                    </Link>
+          {spreads.map((s, i) =>
+            i === 2 ? (
+              // Full-width cinematic layout — image fills 16:9, text overlays from bottom-left
+              <Reveal key={s.slug}>
+                <div className="container-studio py-20 md:py-28">
+                  <div className="plate-frame relative overflow-hidden">
+                    <Plate index={s.plate} alt={`${s.name} sample`} className="aspect-[16/9] w-full" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-void/92 via-void/30 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-8 md:p-14">
+                      <div className="max-w-lg">
+                        <h3 className="font-display text-4xl font-black tracking-tight text-bone md:text-5xl">{s.name}</h3>
+                        <p className="font-editorial mt-4 text-lg leading-relaxed text-stone">{s.description}</p>
+                        <Link
+                          href={`/portfolio/${s.slug}`}
+                          className="font-mono tracking-[0.04em] mt-6 inline-block text-xs text-silver underline decoration-silver-dim underline-offset-4"
+                        >
+                          See {s.name.toLowerCase()} work
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ) : (
+              <Reveal key={s.slug}>
+                <div className="container-studio relative overflow-hidden py-20 md:py-28">
+                  <span
+                    aria-hidden="true"
+                    className={`numeral-ghost absolute -top-6 select-none text-[9rem] sm:text-[13rem] md:text-[16rem] ${
+                      i % 2 === 1 ? "-right-4 md:-right-8" : "-left-4 md:-left-8"
+                    }`}
+                  >
+                    0{i + 1}
+                  </span>
+                  <div className="relative grid gap-10 md:grid-cols-12 md:items-center md:gap-12">
+                    <div className={`plate-frame md:col-span-7 ${i % 2 === 1 ? "md:order-2" : ""}`}>
+                      <Plate index={s.plate} alt={`${s.name} sample`} className="aspect-[4/3] w-full" />
+                    </div>
+                    <div className={`md:col-span-4 ${i % 2 === 1 ? "md:order-1 md:col-start-1" : "md:col-start-9"}`}>
+                      <h3 className="font-display text-4xl font-black tracking-tight text-bone md:text-5xl">{s.name}</h3>
+                      <p className="font-editorial mt-5 text-lg leading-relaxed text-stone">{s.description}</p>
+                      <Link
+                        href={`/portfolio/${s.slug}`}
+                        className="font-mono tracking-[0.04em] mt-6 inline-block text-xs text-silver underline decoration-silver-dim underline-offset-4"
+                      >
+                        See {s.name.toLowerCase()} work
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            )
+          )}
         </section>
 
         {/* Process */}
         <section className="container-studio py-24 md:py-36">
-          <Reveal className="mb-16">
+          <Reveal kind="heading" className="mb-16">
             <Eyebrow>Process</Eyebrow>
             <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-bone md:text-5xl">
               How a shoot <span className="heading-lean">comes together</span>
@@ -143,29 +169,15 @@ export default function HomePage() {
         {/* Testimonials */}
         <section className="border-t border-bone/10 bg-charcoal py-24 md:py-36">
           <div className="container-studio">
-            <Reveal className="mb-16">
-              <Eyebrow>In their words</Eyebrow>
+            <Reveal>
+              <TestimonialsCarousel />
             </Reveal>
-            <div className="grid gap-14 md:grid-cols-3 md:gap-10">
-              {testimonials.map((t, i) => (
-                <Reveal key={t.name} delay={i * 0.06} className="flex flex-col">
-                  <span aria-hidden="true" className="numeral-ghost text-6xl leading-none text-silver/20">
-                    &ldquo;
-                  </span>
-                  <p className="-mt-4 font-editorial text-xl italic leading-snug text-bone">{t.quote}</p>
-                  <div className="mt-8 border-t border-bone/10 pt-4">
-                    <p className="font-editorial text-lg text-bone">{t.name}</p>
-                    <p className="font-editorial text-base text-smoke">{t.context}</p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
           </div>
         </section>
 
         {/* CTA */}
         <section className="container-studio py-28 text-center md:py-40">
-          <Reveal>
+          <Reveal kind="heading">
             <h2 className="mx-auto max-w-2xl text-balance font-display text-4xl font-black tracking-tight text-bone md:text-5xl">
               If your date is worth remembering, <span className="heading-lean">it&rsquo;s worth beginning with a conversation.</span>
             </h2>

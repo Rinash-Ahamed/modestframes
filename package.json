@@ -16,9 +16,7 @@
     "motion": "13.2.0",
     "lucide-react": "1.42.0",
     "clsx": "2.1.1",
-    "nanoid": "6.0.1",
-    "@fontsource/instrument-serif": "5.2.6",
-    "@fontsource/manrope": "5.2.6"
+    "nanoid": "6.0.1"
   },
   "devDependencies": {
     "typescript": "5.9.3",

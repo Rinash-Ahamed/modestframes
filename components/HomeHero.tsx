@@ -1,16 +1,20 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { motion, type Variants } from "motion/react";
 import Link from "next/link";
-import { Plate } from "./Plate";
 import { studio } from "@/lib/site";
 
 const EASE_STUDIO = [0.22, 1, 0.36, 1] as const;
 
+// Sync with CameraLensIntro: intro fades starting at 3100ms.
+// Hero content begins at 3.0s so the tagline is mid-reveal as the overlay clears.
+const HERO_DELAY = 3.0;
+
 const container: Variants = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.1, delayChildren: 0.5 },
+    transition: { staggerChildren: 0.12, delayChildren: HERO_DELAY },
   },
 };
 
@@ -32,16 +36,34 @@ const TAGLINE_LINES = [
 ];
 
 export function HomeHero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {});
+    }
+  }, []);
+
   return (
     <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-void">
-      <motion.div
-        initial={{ scale: 1.12 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 9, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-0"
-      >
-        <Plate index={2} alt="Wedding portrait, studio lead image" className="h-full w-full" priority sizes="100vw" />
-      </motion.div>
+      <div className="absolute inset-0 overflow-hidden bg-void">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+          disableRemotePlayback
+          aria-hidden="true"
+          className="h-full w-full object-cover pointer-events-none"
+        >
+          <source src="/video/mad-hero.mp4" type="video/mp4" />
+        </video>
+      </div>
 
       {/* Layered scrims: a long fade to black at the base for text contrast,
           plus a tighter vignette at the edges for depth. */}
@@ -52,7 +74,7 @@ export function HomeHero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 1, delay: HERO_DELAY + 0.25 }}
         className="absolute left-6 top-28 z-10 hidden items-center gap-3 md:flex md:left-12 xl:left-20"
       >
         <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone">Est. studio, {studio.city}</span>
@@ -66,11 +88,13 @@ export function HomeHero() {
       >
         <div>
           {TAGLINE_LINES.map((line_) => (
-            <div key={line_.text} className="overflow-hidden">
+            <div key={line_.text} className={`overflow-hidden ${line_.lean ? "pb-1" : ""}`}>
               <motion.h1
                 variants={line}
-                className={`text-balance text-5xl leading-[1.08] sm:text-6xl md:text-[5.5rem] md:leading-[1.05] ${
-                  line_.lean ? "heading-lean" : "font-display font-black tracking-tight text-bone"
+                className={`text-balance text-5xl leading-[1.08] sm:text-6xl md:text-[5.5rem] ${
+                  line_.lean
+                    ? "heading-lean md:leading-[1.12]"
+                    : "font-display font-black tracking-tight text-bone md:leading-[1.05]"
                 }`}
               >
                 {line_.text}

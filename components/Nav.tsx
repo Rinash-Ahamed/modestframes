@@ -54,10 +54,7 @@ export function Nav() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <motion.header
-      initial={{ y: -90 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.9, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+    <header
       className={clsx(
         "fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,backdrop-filter] duration-500",
         scrolled || open
@@ -180,6 +177,6 @@ export function Nav() {
         className="absolute inset-x-0 bottom-0 h-px origin-left bg-bone/55"
         style={{ scaleX: smoothProgress }}
       />
-    </motion.header>
+    </header>
   );
 }

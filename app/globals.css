@@ -7,8 +7,8 @@
   --color-graphite: #3d3d3d;
   --color-stone: #b8b8b8;
   --color-smoke: #949494;
-  --color-bone: #f5f5f5;
-  --color-silver: #f5f5f5;
+  --color-bone: #f0efec;
+  --color-silver: #ffffff;
   --color-silver-dim: #909090;
 
   --font-display: "Playfair Display", serif;
@@ -47,7 +47,7 @@ html {
 
 body {
   background-color: #080808;
-  color: #f5f5f5;
+  color: #f0efec;
   font-family: var(--font-editorial);
   font-size: 20px;
   font-weight: 500;
@@ -73,12 +73,12 @@ body {
 }
 
 ::selection {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   color: #080808;
 }
 
 :focus-visible {
-  outline: 1px solid #f5f5f5;
+  outline: 1px solid #ffffff;
   outline-offset: 3px;
 }
 
