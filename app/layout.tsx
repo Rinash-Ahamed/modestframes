@@ -58,7 +58,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${cormorant.variable} ${spaceMono.variable}`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${playfair.variable} ${cormorant.variable} ${spaceMono.variable}`}
+    >
       <body className="font-editorial">
         <CameraLensIntro />
         <PublicPageMotion>{children}</PublicPageMotion>

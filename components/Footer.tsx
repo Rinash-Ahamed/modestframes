@@ -1,12 +1,44 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { CATEGORY_INFO } from "@/lib/site";
-import { studio } from "@/lib/site";
+import { useEffect, useRef } from "react";
+import { CATEGORY_INFO, studio } from "@/lib/site";
 
 export function Footer() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {});
+    }
+  }, []);
+
   return (
-    <footer className="border-t border-bone/10 bg-void">
-      <div className="container-studio grid gap-12 py-16 md:grid-cols-4 md:py-24">
+    <footer className="relative overflow-hidden border-t border-bone/10 bg-void">
+      {/* Ambient smoke background video */}
+      <div className="pointer-events-none absolute inset-0 select-none overflow-hidden">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+          disableRemotePlayback
+          aria-hidden="true"
+          className="h-full w-full object-cover opacity-35 mix-blend-screen"
+        >
+          <source src="/video/smoke-footer-video.mp4" type="video/mp4" />
+        </video>
+        {/* Soft edge fade for natural integration with void background */}
+        <div className="absolute inset-0 bg-gradient-to-t from-void via-void/50 to-void/85" />
+      </div>
+
+      <div className="container-studio relative z-10 grid gap-12 py-12 md:grid-cols-4 md:py-18">
         <div className="md:col-span-2">
           <Link href="/" aria-label="ModestFrames home" className="group flex w-fit items-center gap-4">
             <Image
@@ -25,8 +57,8 @@ export function Footer() {
             />
           </Link>
           <p className="mt-4 max-w-sm font-editorial text-xl italic leading-snug text-stone">{studio.tagline}</p>
-          <p className="font-editorial mt-8 text-lg text-stone">
-            {studio.city}, {studio.region} - available for travel
+          <p className="font-editorial mt-6 text-lg text-stone">
+            {studio.city}, {studio.region} · Available for travel
           </p>
           <div className="mt-7 flex gap-3">
             <a
@@ -99,7 +131,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="container-studio flex flex-col gap-3 border-t border-bone/10 py-6 font-mono text-[10px] text-smoke md:flex-row md:items-center md:justify-between">
+      <div className="container-studio relative z-10 flex flex-col gap-3 border-t border-bone/10 py-5 font-mono text-[10px] text-smoke md:flex-row md:items-center md:justify-between">
         <p>&copy; {new Date().getFullYear()} {studio.fullName}. All rights reserved.</p>
         <Link href="/admin/login" className="text-smoke transition-colors hover:text-stone">
           Studio Login
@@ -108,3 +140,5 @@ export function Footer() {
     </footer>
   );
 }
+
+export default Footer;

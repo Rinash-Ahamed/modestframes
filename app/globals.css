@@ -27,12 +27,13 @@
   scrollbar-color: #3d3d3d #080808;
 }
 
-html {
+html[data-scroll-behavior="smooth"] {
   scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
+  html,
+  html[data-scroll-behavior="smooth"] {
     scroll-behavior: auto;
   }
   *,

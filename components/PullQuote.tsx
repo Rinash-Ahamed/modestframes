@@ -2,7 +2,7 @@ import { Reveal } from "./Reveal";
 
 export function PullQuote({ eyebrow, children }: { eyebrow?: string; children: string }) {
   return (
-    <section className="border-y border-bone/10 bg-void py-24 md:py-36">
+    <section className="border-y border-bone/10 bg-void py-14 md:py-20">
       <div className="container-studio">
         <Reveal>
           {eyebrow && (

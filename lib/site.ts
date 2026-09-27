@@ -28,7 +28,7 @@ export const CATEGORY_INFO: CategoryInfo[] = [
     slug: "wedding",
     short: "The full account of the day, told without staging it twice.",
     description:
-      "Two families, one continuous day, and no moment recreated for the camera. Full coverage from the first knot tied in a dupatta to the last dance under string lights - documentary in the unscripted moments, directed only where tradition calls for it.",
+      "Two families, one continuous day, and no moment recreated for the camera. Full coverage from the first knot tied in a dupatta to the last dance under string lights, documentary in the unscripted moments, directed only where tradition calls for it.",
     plate: 2,
   },
   {
@@ -44,7 +44,7 @@ export const CATEGORY_INFO: CategoryInfo[] = [
     slug: "post-wedding",
     short: "For the portraits there wasn't time for on the day itself.",
     description:
-      "Weddings rarely leave room for a slow, considered portrait session. This is that session - scheduled for the week after, when there's finally time to do it properly.",
+      "Weddings rarely leave room for a slow, considered portrait session. This is that session, scheduled for the week after, when there is finally time to do it properly.",
     plate: 6,
   },
   {
@@ -60,7 +60,7 @@ export const CATEGORY_INFO: CategoryInfo[] = [
     slug: "baby-shower",
     short: "The room, the ritual, and everyone who came to fill it.",
     description:
-      "Godh bharai, seemantham, or simply a room full of people celebrating - covered with the same attention given to a wedding, at a fraction of the scale.",
+      "Godh bharai, seemantham, or simply a room full of people celebrating, covered with the same attention given to a wedding, at a fraction of the scale.",
     plate: 3,
   },
   {
@@ -76,7 +76,7 @@ export const CATEGORY_INFO: CategoryInfo[] = [
     slug: "newborn",
     short: "The first ten days, photographed on the baby's schedule.",
     description:
-      "No forced poses, no long sessions - newborn shoots here run short, at home, on infant time, guided by a photographer who has done this often enough to work around a feeding schedule.",
+      "No forced poses, no long sessions. Newborn shoots here run short, at home, on infant time, guided by a photographer who works gently around feeding and rest schedules.",
     plate: 5,
   },
   {
@@ -84,13 +84,13 @@ export const CATEGORY_INFO: CategoryInfo[] = [
     slug: "family",
     short: "Everyone in the same frame, looking like themselves.",
     description:
-      "Multi-generation family portraits shot to be printed and hung, not scrolled past - deliberate about who stands where, and why.",
+      "Multi-generation family portraits shot to be printed and hung, not scrolled past, deliberate about who stands where, and why.",
     plate: 8,
   },
   {
     name: "Events",
     slug: "events",
-    short: "Corporate, cultural, or private - covered end to end.",
+    short: "Corporate, cultural, or private, covered end to end.",
     description:
       "Product launches, anniversaries, religious functions, and private parties, photographed for the record and for the retelling.",
     plate: 13,
@@ -101,7 +101,7 @@ export const process_ = [
   {
     step: "01",
     title: "Consultation",
-    body: "A call or a coffee. We talk through the day, the family, the light at your venue, and whether this studio is the right fit - before either of us commits.",
+    body: "A call or a coffee. We talk through the day, the family, the light at your venue, and whether this studio is the right fit before either of us commits.",
   },
   {
     step: "02",
@@ -111,12 +111,12 @@ export const process_ = [
   {
     step: "03",
     title: "The Edit",
-    body: "Every frame is culled by hand - no batch presets applied blind. Delivery of a curated proof gallery typically takes 10–15 working days.",
+    body: "Every frame is culled and toned by hand, with no batch presets applied blind. Delivery of a curated proof gallery typically takes 10 to 15 working days.",
   },
   {
     step: "04",
     title: "Your Selection",
-    body: "You review the proof gallery privately, mark your favourites, and submit your selection through this site - no spreadsheets, no email threads.",
+    body: "You review the proof gallery privately, mark your favourites, and submit your selection through this site, without spreadsheets or email threads.",
   },
   {
     step: "05",
@@ -149,18 +149,18 @@ export const testimonials = [
 export const faqs = [
   {
     q: "How do we get access to our photo gallery?",
-    a: "After your shoot, you'll receive a private access code by email or message. Enter it on the Client Gallery page - no account or password to remember.",
+    a: "After your shoot, you will receive a private access code by email or message. Enter it on the Client Gallery page, with no account or password needed.",
   },
   {
     q: "How many images can we select?",
-    a: "Your package includes a set number of final retouched images, shown at the top of your gallery. You can select up to that number; anything beyond is available as a paid add-on.",
+    a: "Your package includes a set number of final retouched images, shown at the top of your gallery. You can select up to that number; anything beyond is available as an add-on.",
   },
   {
     q: "Can more than one family member choose?",
-    a: "Yes - the access code can be shared with anyone you'd like input from. Selections are saved as you go, and only submitted once you confirm.",
+    a: "Yes, the access code can be shared with anyone you would like input from. Selections are saved as you go, and only submitted once you confirm.",
   },
   {
     q: "What happens after we submit our selection?",
-    a: "You'll get a confirmation, and retouching begins on exactly the frames you chose. Turnaround time is confirmed at your consultation.",
+    a: "You will receive a confirmation, and retouching begins on exactly the frames you chose. Turnaround time is confirmed at your consultation.",
   },
 ];

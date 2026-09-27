@@ -1,5 +1,6 @@
 node_modules
 .next
+.agents
 out
 .env
 .env.local
