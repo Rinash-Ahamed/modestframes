@@ -125,8 +125,8 @@ export function VisualOrbit() {
       ref={sectionRef}
       className="relative min-h-[580px] overflow-hidden bg-void pt-10 pb-16 text-bone md:pt-14 md:pb-20"
     >
-      {/* Ambient background */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(84,92,255,0.08),transparent_35%)]" />
+      {/* Ambient background - soft wide white ambient wash (no spiral or circular rings) */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_45%_at_50%_40%,rgba(255,255,255,0.03),transparent)]" />
 
       <div className="container-studio relative z-10">
         {/* Header - No frames counter */}
@@ -140,7 +140,7 @@ export function VisualOrbit() {
           </h2>
 
           <p className="font-editorial mt-2 text-base text-stone/80">
-            Drag to explore or scroll down to spin. Select any frame to center.
+            A curated selection of unscripted moments.
           </p>
         </div>
 
@@ -183,13 +183,6 @@ export function VisualOrbit() {
               />
             ))}
           </motion.div>
-
-          {/* Drag & Scroll Label Pill */}
-          <div className="pointer-events-none absolute bottom-3 left-1/2 z-20 -translate-x-1/2 rounded-full border border-white/10 bg-black/50 px-6 py-2 backdrop-blur-md">
-            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/50">
-              Drag or Scroll
-            </span>
-          </div>
         </div>
       </div>
 

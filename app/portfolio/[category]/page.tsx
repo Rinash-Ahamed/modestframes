@@ -80,7 +80,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               <Reveal
                 key={i}
                 delay={(i % 4) * 0.04}
-                className={`plate-frame overflow-hidden ${TILE_CLASSES[i % TILE_CLASSES.length]}`}
+                className={`plate-frame overflow-hidden rounded-[22px] border border-bone/15 shadow-md ${TILE_CLASSES[i % TILE_CLASSES.length]}`}
               >
                 <Plate
                   index={p}

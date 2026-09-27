@@ -23,7 +23,7 @@ export function CoverageGrid() {
         const { span, aspect } = LAYOUT[i % LAYOUT.length];
         return (
           <Link key={c.slug} href={`/portfolio/${c.slug}`} className={`group block ${span}`}>
-            <div className={`plate-frame overflow-hidden ${aspect}`}>
+            <div className={`plate-frame overflow-hidden rounded-[22px] border border-bone/15 shadow-xl transition-all duration-500 group-hover:border-bone/35 group-hover:shadow-2xl ${aspect}`}>
               <Plate
                 index={c.plate}
                 alt={`${c.name} photography`}

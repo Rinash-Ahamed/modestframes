@@ -90,7 +90,7 @@ export default function HomePage() {
               // Full-width cinematic layout — image fills 16:9, text overlays from bottom-left
               <Reveal key={s.slug}>
                 <div className="container-studio py-12 md:py-16">
-                  <div className="plate-frame relative overflow-hidden">
+                  <div className="plate-frame relative overflow-hidden rounded-[22px] border border-bone/15 shadow-2xl">
                     <Plate index={s.plate} alt={`${s.name} sample`} className="aspect-[16/9] w-full" />
                     <div className="absolute inset-0 bg-gradient-to-t from-void/92 via-void/30 to-transparent" />
                     <div className="absolute inset-x-0 bottom-0 p-8 md:p-12">
@@ -120,7 +120,7 @@ export default function HomePage() {
                     0{i + 1}
                   </span>
                   <div className="relative grid gap-8 md:grid-cols-12 md:items-center md:gap-12">
-                    <div className={`plate-frame md:col-span-7 ${i % 2 === 1 ? "md:order-2" : ""}`}>
+                    <div className={`plate-frame overflow-hidden rounded-[22px] border border-bone/15 shadow-2xl md:col-span-7 ${i % 2 === 1 ? "md:order-2" : ""}`}>
                       <Plate index={s.plate} alt={`${s.name} sample`} className="aspect-[4/3] w-full" />
                     </div>
                     <div className={`md:col-span-4 ${i % 2 === 1 ? "md:order-1 md:col-start-1" : "md:col-start-9"}`}>

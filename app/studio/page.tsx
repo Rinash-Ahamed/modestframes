@@ -63,7 +63,7 @@ export default function StudioPage() {
         </section>
 
         <section className="container-studio pb-24">
-          <Reveal className="plate-frame">
+          <Reveal className="plate-frame overflow-hidden rounded-[22px] border border-bone/15 shadow-2xl">
             <Plate index={7} alt="Studio at work" className="aspect-[16/9] w-full" priority />
           </Reveal>
         </section>
