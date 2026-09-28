@@ -39,7 +39,7 @@ export default function StudioPage() {
     <>
       <Nav />
       <main>
-        <section className="container-studio grid gap-10 pb-20 pt-40 md:grid-cols-12 md:gap-8 md:pt-48">
+        <section className="container-studio grid gap-10 pb-16 pt-28 md:grid-cols-12 md:gap-8 md:pb-20 md:pt-32">
           <Reveal className="md:col-span-6">
             <div className="flex items-center gap-3">
               <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone">The Studio</span>

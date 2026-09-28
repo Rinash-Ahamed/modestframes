@@ -16,7 +16,7 @@ export default function ProcessPage() {
     <>
       <Nav />
       <main>
-        <section className="container-studio pb-16 pt-40 md:pt-48">
+        <section className="container-studio pb-12 pt-28 md:pb-16 md:pt-32">
           <Reveal>
             <div className="flex items-center gap-3">
               <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone">Process</span>

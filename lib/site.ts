@@ -11,7 +11,9 @@ export const studio = {
   phone: "+91 824 860 6826",
   whatsappUrl: "https://wa.me/918248606826",
   instagram: "@modest_frames_",
-  instagramUrl: "https://www.instagram.com/modest_frames_/",
+  instagramUrl: "https://www.instagram.com/modest_frames_?stkn=Y25kaHRmemVvdzA0",
+  threads: "@modest_frames_",
+  threadsUrl: "https://www.threads.net/@modest_frames_",
 };
 
 export interface CategoryInfo {

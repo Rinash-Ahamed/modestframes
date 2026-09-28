@@ -15,7 +15,7 @@ export default function PortfolioPage() {
     <>
       <Nav />
       <main>
-        <section className="container-studio pb-20 pt-40 md:pt-48">
+        <section className="container-studio pb-16 pt-28 md:pb-20 md:pt-32">
           <Reveal>
             <div className="flex items-center gap-3">
               <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone">Portfolio</span>

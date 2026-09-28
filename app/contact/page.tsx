@@ -15,7 +15,7 @@ export default function ContactPage() {
     <>
       <Nav />
       <main>
-        <section className="container-studio grid gap-12 pb-28 pt-40 md:grid-cols-12 md:gap-8 md:pt-48">
+        <section className="container-studio grid gap-12 pb-20 pt-28 md:grid-cols-12 md:gap-8 md:pb-24 md:pt-32">
           <Reveal className="md:col-span-5">
             <div className="flex items-center gap-3">
               <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone">Contact</span>
@@ -58,6 +58,19 @@ export default function ContactPage() {
                     className="transition-colors hover:text-silver"
                   >
                     {studio.instagram}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-stone">Threads</dt>
+                <dd className="mt-1 text-bone">
+                  <a
+                    href={studio.threadsUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="transition-colors hover:text-silver"
+                  >
+                    {studio.threads}
                   </a>
                 </dd>
               </div>
